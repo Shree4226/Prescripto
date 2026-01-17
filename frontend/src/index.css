@@ -12,7 +12,21 @@
     @apply hidden
 }
 
-.grid-cols-auto {
+.grid-cols-auto{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+@media (min-width: 640px) {
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+}
+
