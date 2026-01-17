@@ -1,9 +1,18 @@
 @import "tailwindcss";
 
 :root{
-    --primary:#5f6FFF
+    --primary:#5f6FFF,
 }
 
 .active hr{
     @apply block
+}
+
+::-webkit-scrollbar{
+    @apply hidden
+}
+
+.grid-cols-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
