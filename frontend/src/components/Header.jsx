@@ -8,9 +8,10 @@ const Header = () => {
         {/* ---left side ----*/}
 
         <div className='md:w-1/2 flex flex-col items-start justify-center gap-4 py-10 m-auto md:py-[5vw] md:mb-7.5'>
-            <p className='text-3xl md:text-4xl lg:text-5xl text-white font-semibold leading-tight md:leading-tight lg:leading-tight'>
+                 <p className='text-3xl md:text-4xl lg:text-5xl text-white font-semibold leading-tight md:leading-tight lg:leading-tight'>
                 Book Appointment <br/> With Trusted Doctors
-            </p>
+                </p>
+            
             <div className='flex flex-col md:flex-row items-center gap-3 text-white text-sm font-light'>
                 <img className='w-28' src={assets.group_profiles} alt=''/>
                 <p>Simply browse through our extensive list of trusted doctors, <br className='hidden sm:block'/> schedule your appointment hasle-free.</p>

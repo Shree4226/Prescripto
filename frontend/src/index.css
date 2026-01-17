@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root{
-    --primary:#5f6FFF,
+    --primary:#5f6FFF;
 }
 
 .active hr{
