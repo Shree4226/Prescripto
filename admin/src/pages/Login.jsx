@@ -1,5 +1,4 @@
 import React from 'react'
-import {assets} from '../assets/assets'
 import { useState } from 'react'
 import { useContext } from 'react'
 import { AdminConext } from '../context/AdminContext'
@@ -28,10 +27,10 @@ export const Login = () => {
                     toast.error(data.message)
                 }
             }else{
-                
+                 toast.info('Doctor login coming soon')
             }
         }catch(error){
-            <div>hello</div>
+           error.response?.data?.message || 'Server error. Please try again.'
         }
     }
 
