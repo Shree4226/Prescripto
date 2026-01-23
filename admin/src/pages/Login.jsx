@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 import { useContext } from 'react'
-import { AdminConext } from '../context/AdminContext'
+import { AdminContext } from '../context/AdminContext'
 import axios from'axios'
 import {toast} from 'react-toastify'
 
 export const Login = () => {
 
     const [state, setState] = useState('Admin')
-    const {setAToken, backendUrl} = useContext(AdminConext)
+    const {setAToken, backendUrl} = useContext(AdminContext)
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')

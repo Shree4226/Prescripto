@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import { AdminConext } from '../context/AdminContext'
+import { AdminContext } from '../context/AdminContext'
 import { NavLink } from 'react-router-dom'
 import { assets } from '../assets/assets'
 
 const Sidebar = () => {
 
-  const {aToken} = useContext(AdminConext)
+  const {aToken} = useContext(AdminContext)
   return (
     <div className='min-h-screen bg-white border'>
       {

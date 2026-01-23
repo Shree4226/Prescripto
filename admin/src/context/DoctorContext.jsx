@@ -1,15 +1,15 @@
 import { createContext } from "react";
 
-export const DoctorConext = createContext()
+export const DoctorContext = createContext()
 
 const DoctorContextProvider = (props) =>{
     const value={
 
     }
     return (
-        <DoctorConext.Provider value={value}>
+        <DoctorContext.Provider value={value}>
             {props.children}
-        </DoctorConext.Provider>
+        </DoctorContext.Provider>
     )
 }
 

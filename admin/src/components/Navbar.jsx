@@ -1,12 +1,12 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { useContext } from 'react'
-import { AdminConext } from '../context/AdminContext'
+import { AdminContext } from '../context/AdminContext'
 import {useNavigate} from 'react-router-dom'
 
 const Navbar = () => {
 
-    const {aToken, setAToken} = useContext(AdminConext)
+    const {aToken, setAToken} = useContext(AdminContext)
     const navigate = useNavigate()
 
     const logout = ()=>{

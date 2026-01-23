@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { assets } from '../../assets/assets'
-import { AdminConext } from '../../context/AdminContext'
+import { AdminContext } from '../../context/AdminContext'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 
@@ -18,7 +18,7 @@ const AddDoctor = () => {
   const [address1, setAddress1] = useState('')
   const [address2, setAddress2] = useState('')
 
-  const {backendUrl, aToken} = useContext(AdminConext)
+  const {backendUrl, aToken} = useContext(AdminContext)
  
   const onSubmitHandler = async(event)=>{
     event.preventDefault()
@@ -124,7 +124,7 @@ const AddDoctor = () => {
           <div className='w-full lg:flex-1 flex flex-col gap-4'>
             <div className='flex-1 flex flex-col gap-1'>
               <p>Speciality</p>
-              <select onChange={(e)=>setSpeciality(e.target)} value={speciality} className='border rounded px-3 py-2' name='' id=''>
+              <select onChange={(e)=>setSpeciality(e.target.value)} value={speciality} className='border rounded px-3 py-2' name='' id=''>
                 <option value="General physician">General physician</option>
                 <option value="Gynecologist">Gynecologist</option>
                 <option value="Dermatologist">Dermatologist</option>

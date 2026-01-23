@@ -2,7 +2,7 @@ import React from 'react'
 import { Login } from './pages/Login'
 import { ToastContainer } from 'react-toastify';
 import { useContext } from 'react';
-import { AdminConext } from './context/AdminContext';
+import { AdminContext } from './context/AdminContext';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import {Route, Routes} from 'react-router-dom'
@@ -12,7 +12,7 @@ import AddDoctor from './pages/admin/AddDoctor'
 import DoctorsList from './pages/admin/DoctorsList';
 const App = () => {
 
-  const {aToken} = useContext(AdminConext)
+  const {aToken} = useContext(AdminContext)
 
   return aToken?(
     <div className='bg-[#F8F9Fd]'>
@@ -25,7 +25,7 @@ const App = () => {
           <Route path = '/admin-dashboard' element={<Dashboard/>}/> 
           <Route path='/all-appointments'element={<AllAppointments/>}/>
           <Route path='/add-doctor'element={< AddDoctor />}/>
-          <Route path='/doctor-list'element={< DoctorsList />}/>
+          <Route path='/doctor-list' element={< DoctorsList />}/>
         </Routes>
       </div>
     </div>
