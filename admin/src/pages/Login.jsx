@@ -5,12 +5,14 @@ import { AdminContext } from '../context/AdminContext'
 import axios from'axios'
 import {toast} from 'react-toastify'
 import { AppContext } from '../../../frontend/src/context/AppContext'
+import { DoctorContext } from '../context/DoctorContext'
 
 export const Login = () => {
 
 
     const [state, setState] = useState('Admin')
     const {setAToken, backendUrl} = useContext(AdminContext)
+    const {setDToken}= useContext(DoctorContext)
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -29,7 +31,14 @@ export const Login = () => {
                     toast.error(data.message)
                 }
             }else{
-                 toast.info('Doctor login coming soon')
+                 const {data} = await axios.post(backendUrl+'/api/doctor/login',{email, password})
+                 if(data.success){
+                    localStorage.setItem('dToken',data.token)
+                    setDToken(data.token)
+                    console.log(data.token)
+                }else{
+                    toast.error(data.message)
+                }
             }
         }catch(error){
            error.response?.data?.message || 'Server error. Please try again.'

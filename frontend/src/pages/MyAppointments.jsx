@@ -88,7 +88,8 @@ const MyAppointments = () => {
         initPay(data.order)
       }
     }catch(error){
-
+      console.log(error)
+      toast.error(error.message)
     }
   }
 
